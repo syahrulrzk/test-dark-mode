@@ -110,7 +110,7 @@ img {
 .navbar .nav-link.active {
     color: var(--color-brand);
 }
-
+/*add color css custem==============================================================*/
 @media (min-width: 992px) {
     .navbar {
         min-height: 100vh;
@@ -135,6 +135,7 @@ img {
     padding: 12px 28px;
     font-weight: 700;
 }
+/*add color css custem=====================================================================*/
 /* Mengubah warna latar belakang tombol close menjadi putih */
 .btn-close {
     background-color: white;
@@ -151,12 +152,13 @@ img {
 .btn.btn-brand:hover {
     color: --color-brand /* Ganti dengan warna yang Anda inginkan */
 }
-.btn-brand:focus {
-    background-color: var(--color-brand2);
-    color: var(--color-base);
-    border-color: var(--color-brand2);
-}
 
+.btn-brand:focus {
+    background-color: var(--color-brand);
+    color: var(--color-base);
+    border-color: var(--color-brand);
+}
+/* // add color css custem==============================================================*/
 .link-custom {
     font-weight: 700;
     position: relative;
@@ -213,8 +215,8 @@ img {
 
 /* CONTACT */
 #contact .form-control {
-    background-color: var(--color-base);
-    border-color: var(--color-base);
+    background-color: var(--color-base1);
+    border-color: #04aa6d57;
     color: var(--color-body);
 }
 
