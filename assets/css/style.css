@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+
+:root {
+    --color-body: #b6cbce;
+    --color-heading: #eef3db;
+    --color-base: #033f47;
+    --color-base2: #022a30;
+    --color-brand: #04aa6d;
+    --color-brand2: #deff58;
+    --sidbar-width: 240px;
+    --font-base: "Bai Jamjuree";
+}
+/*var(--color-base2);*/
+/*color font white = #f0f8ff 
+
+
+
+*/
+body {
+    background-color: rgb(13,23,33);/*#1f242a; ganti bg===============================================*/
+    color: #ddd !important ;
+    font-family: var(--font-base), sans-serif;
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+
+
+h1,h2,h3,h4,h5,h6 {
+    color: var(--color-heading);
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-body);
+    transition: all 0.4s ease;
+}
+
+a:hover {
+    color: var(--color-brand);
+}
+
+img {
+    width: 100%;
+}
+
+.text-brand {
+    color: var(--color-brand);
+}
+
+.bg-base {
+    background-color:#23292df5;  /*ganti bg===============================================*/
+}
+
+.full-height {
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-bottom: 2px solid rgba(255,255,255, 0.1);
+}
+
+.shadow-effect {
+    transition: all 0.5s;
+}
+
+.shadow-effect:hover {
+    box-shadow: -6px 6px 0 0 var(--color-brand);
+}
+
+.iconbox {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    background-color: var(--color-brand);
+    color: var(--color-base);
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: var(--color-base);
+}
+
+.navbar .nav-link {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.navbar .nav-link:hover {
+    color: var(--color-brand);
+}
+
+.navbar .nav-link.active {
+    color: var(--color-brand);
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        min-height: 100vh;
+        width: var(--sidbar-width);
+        background: linear-gradient(rgb(89 89 89 / 87%), rgb(31 36 42 / 80%)); /*url(../images/sidebar-img.jpg); ganti bg===============================================*/
+        background-size: cover;
+        background-position: center;
+    }
+
+    .navbar-brand img {
+        border: 8px solid var(--color-brand);
+    }
+
+    /* CONTENT WRAPPER */
+    #content-wrapper {
+        padding-left: var(--sidbar-width);
+    }
+}
+
+/* BTN */
+.btn {
+    padding: 12px 28px;
+    font-weight: 700;
+}
+/* Mengubah warna latar belakang tombol close menjadi putih */
+.btn-close {
+    background-color: white;
+    color: #000; /* Warna teks tombol close */
+    border: none; /* Menghilangkan border tombol close */
+}
+.btn-brand {
+    background-color: var(--color-brand);
+    border-color: var(--color-brand);
+    color: var(--color-base);
+}
+
+/* CSS untuk mengubah warna teks tombol pada hover */
+.btn.btn-brand:hover {
+    color: #e0f780; /* Ganti dengan warna yang Anda inginkan */
+}
+.btn-brand:focus {
+    background-color: var(--color-brand2);
+    color: var(--color-base);
+    border-color: var(--color-brand2);
+}
+
+.link-custom {
+    font-weight: 700;
+    position: relative;
+}
+
+.link-custom::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-brand);
+    position: absolute;
+    left: 0;
+    top: 110%;
+    transition: all 0.4s;
+}
+
+.link-custom:hover::after {
+    width: 100%;
+}
+
+/* CARD */
+.card-custom .card-custom-image {
+    overflow: hidden;
+}
+
+.card-custom .card-custom-image img {
+    transition: all 0.4s ease;
+}
+
+.card-custom:hover .card-custom-image img {
+    transform: scale(1.1);
+}
+/*add css custem==============================================================*/
+.card-custom-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-custom-image::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, transparent 10%, black 100%);
+  opacity: 0.6; /* Sesuaikan dengan keinginan Anda */
+  z-index: 1; /* Pindahkan efek ke belakang gambar */
+}
+
+/* // add css custem==============================================================*/
+
+
+/* CONTACT */
+#contact .form-control {
+    background-color: var(--color-base);
+    border-color: var(--color-base);
+    color: var(--color-body);
+}
+
+#contact .form-control:focus {
+    border-color: var(--color-brand);
+    box-shadow: none;
+}
+
+#contact .form-control::placeholder {
+    color: var(--color-body);
+}
+
+#contact input.form-control {
+    height: 44px;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-base);
+    border-radius: 100px;
+    font-size: 24px;
+}
+
+/* Ganti warna latar belakang modal menjadi #022a30 */
+.modal-content {
+    background-color: #033f47;/*#F1F0E8;*/
+    /*color: #212529!important;*/ /* Ganti warna teks jika diperlukan */
+}
+
+/* Ganti warna teks "Read More..." */
+.read-more-btn {
+    color: #b6cbce; /* Ganti dengan kode warna yang Anda inginkan */
+    cursor: pointer; /* Mengubah kursor menjadi tanda tangan saat diarahkan ke teks "Read More..." */
+}
+
+/* Mengubah warna border pada elemen dengan kelas "img-thumbnail" */
+.img-thumbnail {
+    border-color: #b6cbce; /* Gantilah [warna-pilihan-anda] dengan kode warna yang Anda inginkan */
+}
+
+/* CSS untuk efek fadeIn dan fadeOut */
+.alert-success {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+
